@@ -19,7 +19,10 @@ namespace ShootingEventSystemWebAPI.Entities
             modelBuilder.Entity<Address>()
                 .Property(r => r.Street)
                 .IsRequired();
- 
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.Email)
+                .IsRequired();
 
             modelBuilder.Entity<Club>()
                 .Property(r => r.Name)
@@ -31,6 +34,10 @@ namespace ShootingEventSystemWebAPI.Entities
             
             modelBuilder.Entity<Result>()
                 .Property(r => r.Score)
+                .HasPrecision(6, 2);
+
+            modelBuilder.Entity<Result>()
+                .Property(r => r.PenaltyPoints)
                 .HasPrecision(6, 2);
 
             modelBuilder.Entity<Competition>()
