@@ -22,9 +22,8 @@ namespace ShootingEventSystemWebAPI.Controllers
             return Ok(userDtos);
         }
 
-        [HttpGet]
-        [Route("{id:int}")]
-        public ActionResult<UserDto> GetById([FromRoute]int id)
+        [HttpGet("ById")]
+        public ActionResult<UserDto> GetById([FromQuery]int id)
         {
             var user = _userService.GetById(id);
             if (user == null)

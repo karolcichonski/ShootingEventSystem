@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<TournamentDbContext>();
 builder.Services.AddScoped<Seeder>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
