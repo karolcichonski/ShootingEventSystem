@@ -15,6 +15,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -24,6 +25,12 @@ var seeder = scope.ServiceProvider.GetRequiredService<Seeder>();
 seeder.Seed();
 
 app.UseHttpsRedirection();
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShootingEventSystem API V1");
+});
 
 app.UseAuthorization();
 
