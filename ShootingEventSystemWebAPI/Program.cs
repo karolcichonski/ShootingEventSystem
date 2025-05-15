@@ -14,6 +14,7 @@ builder.Services.AddScoped<Seeder>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddScoped<IArbiterService, ArbiterService>();
+builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddSwaggerGen();
