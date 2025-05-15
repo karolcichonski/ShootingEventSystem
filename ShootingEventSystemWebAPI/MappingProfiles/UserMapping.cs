@@ -9,6 +9,9 @@ namespace ShootingEventSystemWebAPI.MappingProfiles
         public UserMapping() 
         {
             CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
+            CreateMap<User, CreateUserDto>();
+            CreateMap<CreateUserDto, User>();
         }
     }
 }

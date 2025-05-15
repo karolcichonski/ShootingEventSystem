@@ -8,7 +8,9 @@ namespace ShootingEventSystemWebAPI.Entities
             "Server=(localdb)\\MSSQLLocalDB;Database=TournamentDb;Trusted_Connection=True;";
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Club> Clubs { get; set; }
+        public DbSet<Arbiter> Arbiters { get; set; }
         public DbSet<Competition> Competitions { get; set; }
+        public DbSet<Competitor> Competitors { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<User> Users { get; set; }

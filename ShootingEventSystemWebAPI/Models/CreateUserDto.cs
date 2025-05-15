@@ -2,14 +2,20 @@
 
 namespace ShootingEventSystemWebAPI.Models
 {
-    public class UserDto
+    public class CreateUserDto
     {
-        public int Id { get; set; }
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
+        [Required]
+        [MinLength(8)]
+        public string Password { get; set; }
+        [MaxLength(25)]
         public string Name { get; set; }
+        [MaxLength(25)]
         public string Surname { get; set; }
+        [Phone]
         public string PhoneNumber { get; set; }
-        public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
     }
 }

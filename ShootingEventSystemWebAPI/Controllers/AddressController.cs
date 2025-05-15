@@ -35,9 +35,9 @@ namespace ShootingEventSystemWebAPI.Controllers
         [HttpPost]
         public ActionResult<int> CreateAddress([FromBody] AddressDto addressDto)
         {
-            if (addressDto == null)
+            if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(ModelState);
             }
             var id = _addressService.CreateAddress(addressDto);
             return CreatedAtAction(nameof(GetById), new { id }, id);

@@ -34,7 +34,7 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("email")]
+        [Route("ByEmail")]
         public ActionResult<UserDto> GetByEmail([FromQuery] string email)
         {
             var user = _userService.GetByEmail(email);
@@ -43,6 +43,17 @@ namespace ShootingEventSystemWebAPI.Controllers
                 return NotFound();
             }
             return Ok(user);
+        }
+
+        [HttpPost]
+        public ActionResult<int> CreateUser([FromBody] CreateUserDto CreateUserDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var id = _userService.CreateUser(CreateUserDto);
+            return CreatedAtAction(nameof(GetById), new { id }, id);
         }
     }
 }

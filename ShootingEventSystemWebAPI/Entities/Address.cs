@@ -1,4 +1,6 @@
-﻿namespace ShootingEventSystemWebAPI.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShootingEventSystemWebAPI.Entities
 {
     public class Address
     {
