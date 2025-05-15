@@ -10,6 +10,7 @@ namespace ShootingEventSystemWebAPI.Models
         [Required]
         [MinLength(8)]
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
         [MaxLength(25)]
         public string Name { get; set; }
         [MaxLength(25)]
