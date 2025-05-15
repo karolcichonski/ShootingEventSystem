@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShootingEventSystemWebAPI.Entities;
 
@@ -11,9 +12,10 @@ using ShootingEventSystemWebAPI.Entities;
 namespace ShootingEventSystemWebAPI.Migrations
 {
     [DbContext(typeof(TournamentDbContext))]
-    partial class TournamentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250512125520_Address_and_club_changed")]
+    partial class Address_and_club_changed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,7 +106,7 @@ namespace ShootingEventSystemWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Arbiters");
+                    b.ToTable("Arbiter");
                 });
 
             modelBuilder.Entity("ShootingEventSystemWebAPI.Entities.Club", b =>
@@ -131,7 +133,8 @@ namespace ShootingEventSystemWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
+                    b.HasIndex("AddressId")
+                        .IsUnique();
 
                     b.ToTable("Clubs");
                 });
@@ -187,7 +190,7 @@ namespace ShootingEventSystemWebAPI.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Competitors");
+                    b.ToTable("Competitor");
                 });
 
             modelBuilder.Entity("ShootingEventSystemWebAPI.Entities.Result", b =>
@@ -346,8 +349,8 @@ namespace ShootingEventSystemWebAPI.Migrations
             modelBuilder.Entity("ShootingEventSystemWebAPI.Entities.Club", b =>
                 {
                     b.HasOne("ShootingEventSystemWebAPI.Entities.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressId")
+                        .WithOne("Club")
+                        .HasForeignKey("ShootingEventSystemWebAPI.Entities.Club", "AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -416,6 +419,12 @@ namespace ShootingEventSystemWebAPI.Migrations
                     b.HasOne("ShootingEventSystemWebAPI.Entities.Club", null)
                         .WithMany("Users")
                         .HasForeignKey("ClubId");
+                });
+
+            modelBuilder.Entity("ShootingEventSystemWebAPI.Entities.Address", b =>
+                {
+                    b.Navigation("Club")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ShootingEventSystemWebAPI.Entities.Club", b =>

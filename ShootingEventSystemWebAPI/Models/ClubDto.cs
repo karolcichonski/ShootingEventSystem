@@ -1,8 +1,8 @@
-﻿using System.Net;
+﻿using ShootingEventSystemWebAPI.Entities;
 
-namespace ShootingEventSystemWebAPI.Entities
+namespace ShootingEventSystemWebAPI.Models
 {
-    public class Club
+    public class ClubDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -11,6 +11,5 @@ namespace ShootingEventSystemWebAPI.Entities
         public int AddressId { get; set; }
         public virtual Address Address { get; set; }
         public virtual List<User> Users { get; set; }
-
     }
 }
