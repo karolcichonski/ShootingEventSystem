@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Models;
 
@@ -6,7 +7,7 @@ namespace ShootingEventSystemWebAPI.Services
 {
     public interface IArbiterService
     {
-        public IEnumerable<ArbiterDto> GetAllArbiters();
+        public Task<IEnumerable<ArbiterDto>> GetAllArbitersAsync();
         public int CreateArbiter(CreateArbiterDto arbiterDto);
         public ArbiterDto GetById(int id);
         public ArbiterDto GetByUserId(int userId);
@@ -20,10 +21,10 @@ namespace ShootingEventSystemWebAPI.Services
             _dbContext = dbContext;
             _mapper = mapper;
         }
-        public IEnumerable<ArbiterDto> GetAllArbiters()
+        public async Task<IEnumerable<ArbiterDto>> GetAllArbitersAsync()
         {
-            var allArbiters = _dbContext.Arbiters.ToList();
-            var arbitersDtos = _mapper.Map<List<ArbiterDto>>(allArbiters);
+            var allArbiters = await _dbContext.Arbiters.ToListAsync();
+            var arbitersDtos = _mapper.Map<IEnumerable<ArbiterDto>>(allArbiters);
 
             return arbitersDtos;
         }

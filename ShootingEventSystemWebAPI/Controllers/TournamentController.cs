@@ -15,14 +15,14 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<TournamentDto>> GetAllTournaments()
+        public async Task<ActionResult<IEnumerable<TournamentDto>>> GetAllTournamentsAsync()
         {
-            var tournaments = _tournamentService.GetAllTournaments();
+            var tournaments = await _tournamentService.GetAllTournamentsAsync();
             return Ok(tournaments);
         }
 
         [HttpPost]
-        public ActionResult CreateTournament([FromBody] CreateTournamentDto tournamentDto)
+        public ActionResult<int> CreateTournament([FromBody] CreateTournamentDto tournamentDto)
         {
             if (tournamentDto == null)
             {

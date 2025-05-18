@@ -16,14 +16,13 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<CompetitorDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<CompetitorDto>>> GetAllAsync()
         {
-            var competitors = _competitorService.GetAllCompetitors();
+            var competitors = await _competitorService.GetAllCompetitorsAsync();
             return Ok(competitors);
         }
 
-        [HttpGet]
-        [Route("ById")]
+        [HttpGet("ById")]
         public ActionResult<CompetitorDto> GetById([FromQuery] int id)
         {
             var competitor = _competitorService.GetById(id);
@@ -34,8 +33,7 @@ namespace ShootingEventSystemWebAPI.Controllers
             return Ok(competitor);
         }
 
-        [HttpGet]
-        [Route("ByUserId")]
+        [HttpGet("ByUserId")]
         public ActionResult<CompetitorDto> GetByUserId([FromQuery] int userId)
         {
             var competitor = _competitorService.GetByUserId(userId);

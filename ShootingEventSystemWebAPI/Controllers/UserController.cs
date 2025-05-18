@@ -16,9 +16,9 @@ namespace ShootingEventSystemWebAPI.Controllers
 
 
         [HttpGet]
-        public ActionResult<List<UserDto>> GetAllUsers()
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetAllUsersAsync()
         {
-            List<UserDto> userDtos = _userService.GetAllUsers().ToList();
+            IEnumerable<UserDto> userDtos = await _userService.GetAllUsersAsync();
             return Ok(userDtos);
         }
 
@@ -33,8 +33,7 @@ namespace ShootingEventSystemWebAPI.Controllers
             return Ok(user);
         }
 
-        [HttpGet]
-        [Route("ByEmail")]
+        [HttpGet("ByEmail")]
         public ActionResult<UserDto> GetByEmail([FromQuery] string email)
         {
             var user = _userService.GetByEmail(email);

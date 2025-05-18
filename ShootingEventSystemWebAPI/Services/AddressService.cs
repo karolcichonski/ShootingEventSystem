@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Models;
 
@@ -6,7 +7,7 @@ namespace ShootingEventSystemWebAPI.Services
 {
     public interface IAddressService
     {
-        public IEnumerable<AddressDto> GetAllAddresses();
+        public Task<IEnumerable<AddressDto>> GetAllAddressesAsync();
         public AddressDto GetById(int id);
         public int CreateAddress(AddressDto addressDto);
         public void DeleteAddress(int id);
@@ -46,10 +47,10 @@ namespace ShootingEventSystemWebAPI.Services
             }
         }
 
-        public IEnumerable<AddressDto> GetAllAddresses()
+        public async Task<IEnumerable<AddressDto>> GetAllAddressesAsync()
         {
-            var allAddresses = _dbContext.Addresses.ToList();
-            var addressesDtos = _mapper.Map<List<AddressDto>>(allAddresses);
+            var allAddresses = await _dbContext.Addresses.ToListAsync();
+            var addressesDtos = _mapper.Map<IEnumerable<AddressDto>>(allAddresses);
             return addressesDtos;
 
         }

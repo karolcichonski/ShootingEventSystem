@@ -14,14 +14,13 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<ArbiterDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<ArbiterDto>>> GetAllArbitersAsync()
         {
-            var arbiters = _arbiterService.GetAllArbiters();
+            var arbiters = await _arbiterService.GetAllArbitersAsync();
             return Ok(arbiters);
         }
 
-        [HttpGet]
-        [Route("ById")]
+        [HttpGet("ById")]
         public ActionResult<ArbiterDto> GetById([FromQuery] int id)
         {
             var arbiter = _arbiterService.GetById(id);
@@ -32,8 +31,8 @@ namespace ShootingEventSystemWebAPI.Controllers
             return Ok(arbiter);
         }
 
-        [HttpGet]
-        [Route("ByUserId")]
+        [HttpGet("ByUserId")]
+
         public ActionResult<ArbiterDto> GetByUserId([FromQuery] int userId)
         {
             var arbiter = _arbiterService.GetByUserId(userId);
