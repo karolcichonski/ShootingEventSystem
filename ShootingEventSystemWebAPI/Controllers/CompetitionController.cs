@@ -15,14 +15,14 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllCompetitions()
+        public async Task<ActionResult<IEnumerable<CompetitionDto>>> GetAllCompetitionsAsync()
         {
-            var competitions = _competitionService.GetAllCompetitions();
+            var competitions = await _competitionService.GetAllCompetitionsAsync();
             return Ok(competitions);
         }
 
         [HttpPost]
-        public IActionResult CreateCompetition([FromBody] CreateCompetitionDto competitionDto)
+        public ActionResult<int> CreateCompetition([FromBody] CreateCompetitionDto competitionDto)
         {
             if (competitionDto == null)
             {
@@ -34,7 +34,7 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet("ById")]
-        public IActionResult GetById([FromQuery]int id)
+        public ActionResult<CompetitionDto> GetById([FromQuery]int id)
         {
             var competition = _competitionService.GetById(id);
             if (competition == null)
@@ -45,7 +45,7 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet("ByName")]
-        public IActionResult GetByName([FromQuery] string name)
+        public ActionResult<CompetitionDto> GetByName([FromQuery] string name)
         {
             var competition = _competitionService.GetByName(name);
             if (competition == null)

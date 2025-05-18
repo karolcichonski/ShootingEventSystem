@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Models;
 
@@ -7,7 +8,7 @@ namespace ShootingEventSystemWebAPI.Services
 {
     public interface IUserService
     {
-        IEnumerable<UserDto> GetAllUsers();
+        Task<IEnumerable<UserDto>> GetAllUsersAsync();
         UserDto GetById(int id);
         UserDto GetByEmail(string email);
         int CreateUser(CreateUserDto CreateUserDto);
@@ -25,10 +26,10 @@ namespace ShootingEventSystemWebAPI.Services
             _passwordHasher = passwordHasher;
         }
 
-        public IEnumerable<UserDto> GetAllUsers()
+        public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
         {
-            var allUsers = _dbContext.Users.ToList();
-            var usersDtos = _mapper.Map<List<UserDto>>(allUsers);
+            var allUsers = await _dbContext.Users.ToListAsync();
+            var usersDtos = _mapper.Map<IEnumerable<UserDto>>(allUsers);
 
             return usersDtos;
         }

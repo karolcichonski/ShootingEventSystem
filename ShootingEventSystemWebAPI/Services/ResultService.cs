@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Models;
 
@@ -6,7 +7,7 @@ namespace ShootingEventSystemWebAPI.Services
 {
     public interface IResultService
     {
-        IEnumerable<ResultDto> GetAllResults();
+        Task<IEnumerable<ResultDto>> GetAllResultsAsync();
         ResultDto GetById(int id);
         IEnumerable<ResultDto> GetResultsFromTournament(int TournamentId, int CompetitorId);
         int CreateResult(CreateResultDto resultDto);
@@ -33,10 +34,10 @@ namespace ShootingEventSystemWebAPI.Services
             return result.Id;
         }
 
-        public IEnumerable<ResultDto> GetAllResults()
+        public async Task<IEnumerable<ResultDto>> GetAllResultsAsync()
         {
-            var allResults = _dbContext.Results.ToList();
-            var resultsDtos = _mapper.Map<List<ResultDto>>(allResults);
+            var allResults = await _dbContext.Results.ToListAsync();
+            var resultsDtos = _mapper.Map<IEnumerable<ResultDto>>(allResults);
 
             return resultsDtos;
         }

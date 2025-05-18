@@ -15,14 +15,13 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<ResultDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<ResultDto>>> GetAllAsync()
         {
-            var results = _resultService.GetAllResults();
+            var results = await _resultService.GetAllResultsAsync();
             return Ok(results);
         }
 
-        [HttpGet]
-        [Route("ById")]
+        [HttpGet("ById")]
         public ActionResult<ResultDto> GetById([FromQuery] int id)
         {
             var result = _resultService.GetById(id);
@@ -33,8 +32,7 @@ namespace ShootingEventSystemWebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
-        [Route("FromTournament")]
+        [HttpGet("FromTournament")]
         public ActionResult<List<ResultDto>> GetResultsFromTournament([FromQuery] int tournamentId, [FromQuery] int competitorId)
         {
             var results = _resultService.GetResultsFromTournament(tournamentId, competitorId);

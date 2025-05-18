@@ -14,9 +14,9 @@ namespace ShootingEventSystemWebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<AddressDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<AddressDto>>> GetAllAddressesAsync()
         {
-            var addresses = _addressService.GetAllAddresses();
+            var addresses = await _addressService.GetAllAddressesAsync();
             
             return Ok(addresses);
         }

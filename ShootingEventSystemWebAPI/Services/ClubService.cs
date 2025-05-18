@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Models;
 
@@ -6,7 +7,7 @@ namespace ShootingEventSystemWebAPI.Services
 {
     public interface IClubService
     {
-        IEnumerable<ClubDto> GetAllClubs();
+        Task<IEnumerable<ClubDto>> GetAllClubsAsync();
         int CreateClub(CreateClubDto clubDto);
         ClubDto GetById(int id);
         ClubDto GetByName(string name);
@@ -21,10 +22,10 @@ namespace ShootingEventSystemWebAPI.Services
             _mapper = mapper;
         }
 
-        public IEnumerable<ClubDto> GetAllClubs()
+        public async Task<IEnumerable<ClubDto>> GetAllClubsAsync()
         {
-            var allClubs = _dbContext.Clubs.ToList();
-            var clubsDtos = _mapper.Map<List<ClubDto>>(allClubs);
+            var allClubs = await _dbContext.Clubs.ToListAsync();
+            var clubsDtos = _mapper.Map<IEnumerable<ClubDto>>(allClubs);
 
             return clubsDtos;
         }
