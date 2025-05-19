@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Identity;
+using NLog;
+using NLog.Web;
 using ShootingEventSystemWebAPI;
 using ShootingEventSystemWebAPI.Entities;
 using ShootingEventSystemWebAPI.Services;
 using static System.Formats.Asn1.AsnWriter;
 
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,6 +22,7 @@ builder.Services.AddScoped<ICompetitionService, CompetitionService>();
 builder.Services.AddScoped<ICompetitorService, CompetitorService>();
 builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddScoped<ITournamentService, TournamentService>();
+builder.Host.UseNLog();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddSwaggerGen();

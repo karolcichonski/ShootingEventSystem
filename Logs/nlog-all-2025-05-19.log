@@ -1,0 +1,193 @@
+2025-05-19 17:51:41.1829||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-05-19 17:51:41.2697||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2025-05-19 17:51:41.4370||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: BD3646BC64C90E949DB4BF35696775CAF292B90C) 
+2025-05-19 17:51:41.4905||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7072 
+2025-05-19 17:51:41.4905||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5088 
+2025-05-19 17:51:41.4905||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ShootingEventSystemWebAPI 
+2025-05-19 17:51:41.4905||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery 
+2025-05-19 17:51:41.4905||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-05-19 17:51:41.4905||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-05-19 17:51:41.5505||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-05-19 17:51:41.5505||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2025-05-19 17:51:41.5505||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Karol\Programowanie\ShootingEventSystem\ShootingEventSystemWebAPI\ 
+2025-05-19 17:51:41.5505||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2025-05-19 17:51:41.6212||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUE" accepted. 
+2025-05-19 17:51:41.6212||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUE" started. 
+2025-05-19 17:51:41.6212||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUF" accepted. 
+2025-05-19 17:51:41.6212||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUF" started. 
+2025-05-19 17:51:41.6374||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUE" received FIN. 
+2025-05-19 17:51:41.6374||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUF" received FIN. 
+2025-05-19 17:51:41.6589||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, Boolean isApm, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-05-19 17:51:41.6589||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, Boolean isApm, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-05-19 17:51:41.6850||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUF" stopped. 
+2025-05-19 17:51:41.6850||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUE" stopped. 
+2025-05-19 17:51:41.6850||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUF" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-19 17:51:41.6850||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUE" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-19 17:51:42.0320||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUG" accepted. 
+2025-05-19 17:51:42.0320||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUG" started. 
+2025-05-19 17:51:42.0989||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HNCMTK66KDUG established using the following protocol: Tls12 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-05-19 17:51:42.1314||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 1 with length 559 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:42.1844||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-05-19 17:51:42.2204||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/api/test - - 
+2025-05-19 17:51:42.3959||DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2025-05-19 17:51:42.3959||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2025-05-19 17:51:42.4307||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/test' 
+2025-05-19 17:51:42.4307||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI)' with route pattern 'api/test' is valid for the request path '/api/test' 
+2025-05-19 17:51:42.4307||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:42.4814||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2025-05-19 17:51:42.4814||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:42.5073||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetDateTime", controller = "Test"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDateTime() on controller ShootingEventSystemWebAPI.Controllers.TestController (ShootingEventSystemWebAPI). 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ShootingEventSystemWebAPI.Controllers.TestController (ShootingEventSystemWebAPI) 
+2025-05-19 17:51:42.5073||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ShootingEventSystemWebAPI.Controllers.TestController (ShootingEventSystemWebAPI) 
+2025-05-19 17:51:42.5073||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:42.5073||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:42.5073||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-05-19 17:51:42.5073||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-05-19 17:51:42.5073||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI) - Validation state: Valid 
+2025-05-19 17:51:42.5204||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2916ms. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-05-19 17:51:42.5204||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-05-19 17:51:42.5204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-05-19 17:51:42.5204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2025-05-19 17:51:42.5204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-05-19 17:51:42.5204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-05-19 17:51:42.5204||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-05-19 17:51:42.5204||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.DateTime'. 
+2025-05-19 17:51:42.5433||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 1 with length 74 and flags END_HEADERS. 
+2025-05-19 17:51:42.5433||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 1 with length 35 and flags NONE. 
+2025-05-19 17:51:42.5433||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-05-19 17:51:42.5433||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-05-19 17:51:42.5433||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-05-19 17:51:42.5532||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI) in 37.5799ms 
+2025-05-19 17:51:42.5532||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ShootingEventSystemWebAPI.Controllers.TestController.GetDateTime (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:42.5532||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:42.5532||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/api/test - - - 200 - application/json;+charset=utf-8 346.3869ms 
+2025-05-19 17:51:48.1957||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 3 with length 77 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:48.1957||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/swagger/index.html - - 
+2025-05-19 17:51:48.2140||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2025-05-19 17:51:48.2140||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2025-05-19 17:51:48.2140||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2025-05-19 17:51:48.3177||DEBUG|Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware|Response markup is scheduled to include Browser Link script injection. 
+2025-05-19 17:51:48.3177||DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 3 with length 58 and flags END_HEADERS. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 3 with length 698 and flags NONE. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 3 with length 357 and flags NONE. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 3 with length 65 and flags NONE. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 3 with length 16 and flags NONE. 
+2025-05-19 17:51:48.3177||DEBUG|Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware|Response markup was updated to include Browser Link script injection. 
+2025-05-19 17:51:48.3177||DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2025-05-19 17:51:48.3177||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:48.3177||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/swagger/index.html - - - 200 - text/html;charset=utf-8 125.4396ms 
+2025-05-19 17:51:48.3457||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-05-19 17:51:48.3457||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 5 with length 102 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:48.3457||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/swagger/index.js - - 
+2025-05-19 17:51:48.3457||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2025-05-19 17:51:48.3457||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.js' 
+2025-05-19 17:51:48.3457||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2025-05-19 17:51:48.3617||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 5 with length 41 and flags END_HEADERS. 
+2025-05-19 17:51:48.3617||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 5 with length 3130 and flags NONE. 
+2025-05-19 17:51:48.3617||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:48.3617||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.3462ms 
+2025-05-19 17:51:48.3979||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 7 with length 56 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:48.3979||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/_framework/aspnetcore-browser-refresh.js - - 
+2025-05-19 17:51:48.3979||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 9 with length 61 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:48.3979||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/_vs/browserLink - - 
+2025-05-19 17:51:48.3979||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 7 with length 60 and flags END_HEADERS. 
+2025-05-19 17:51:48.3979||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 7 with length 13786 and flags NONE. 
+2025-05-19 17:51:48.3979||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:48.3979||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/_framework/aspnetcore-browser-refresh.js - - - 200 13786 application/javascript;+charset=utf-8 5.6243ms 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 9 with length 149 and flags END_HEADERS. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 9986 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 10240 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 160 and flags NONE. 
+2025-05-19 17:51:48.4786||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 9 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:48.4786||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.7167ms 
+2025-05-19 17:51:48.6111||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 11 with length 78 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:48.6111||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7072/swagger/v1/swagger.json - - 
+2025-05-19 17:51:48.6111||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2025-05-19 17:51:48.6111||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-05-19 17:51:48.6111||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 11 with length 35 and flags END_HEADERS. 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 11 with length 16384 and flags NONE. 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 11 with length 16384 and flags NONE. 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 11 with length 16384 and flags NONE. 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 11 with length 964 and flags NONE. 
+2025-05-19 17:51:48.7862||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending DATA frame for stream ID 11 with length 0 and flags END_STREAM. 
+2025-05-19 17:51:48.7862||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7072/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.1552ms 
+2025-05-19 17:51:57.3477||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" received HEADERS frame for stream ID 13 with length 70 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-05-19 17:51:57.3477||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 DELETE https://localhost:7072/api/address?id=1007 - - 
+2025-05-19 17:51:57.3477||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2025-05-19 17:51:57.3477||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/address' 
+2025-05-19 17:51:57.3477||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI)' with route pattern 'api/address' is valid for the request path '/api/address' 
+2025-05-19 17:51:57.3477||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:57.3477||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2025-05-19 17:51:57.3477||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:57.3708||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DeleteAddress", controller = "Address"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult DeleteAddress(Int32) on controller ShootingEventSystemWebAPI.Controllers.AddressController (ShootingEventSystemWebAPI). 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2025-05-19 17:51:57.3708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ShootingEventSystemWebAPI.Controllers.AddressController (ShootingEventSystemWebAPI) 
+2025-05-19 17:51:57.5409||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ShootingEventSystemWebAPI.Controllers.AddressController (ShootingEventSystemWebAPI) 
+2025-05-19 17:51:57.5620||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2025-05-19 17:51:57.5645||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2025-05-19 17:51:57.5645||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2025-05-19 17:51:57.5645||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2025-05-19 17:51:57.5645||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2025-05-19 17:51:57.5645||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2025-05-19 17:51:57.5645||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:57.5645||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:57.5645||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI) - Validation state: Valid 
+2025-05-19 17:51:57.5645||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI) with arguments (1007) 
+2025-05-19 17:51:57.9138||WARN|ShootingEventSystemWebAPI.Services.AddressService|Deleting address with id 1007 
+2025-05-19 17:51:58.0651||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 491.7323ms. 
+2025-05-19 17:51:58.0651||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:58.0651||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-05-19 17:51:58.0651||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2025-05-19 17:51:58.0651||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 204 
+2025-05-19 17:51:58.0651||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2025-05-19 17:51:58.0651||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI) in 698.1062ms 
+2025-05-19 17:51:58.0651||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ShootingEventSystemWebAPI.Controllers.AddressController.DeleteAddress (ShootingEventSystemWebAPI)' 
+2025-05-19 17:51:58.0651||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" sending HEADERS frame for stream ID 13 with length 33 and flags END_STREAM, END_HEADERS. 
+2025-05-19 17:51:58.0799||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 DELETE https://localhost:7072/api/address?id=1007 - - - 204 - - 730.9129ms 
+2025-05-19 18:14:26.3802||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUG" received FIN. 
+2025-05-19 18:14:26.4369||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HNCMTK66KDUG" is closed. The last processed stream ID was 13. 
+2025-05-19 18:14:26.4369||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNCMTK66KDUG" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-19 18:14:26.4408||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNCMTK66KDUG" stopped. 

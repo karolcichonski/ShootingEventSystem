@@ -17,10 +17,12 @@ namespace ShootingEventSystemWebAPI.Services
     {
         private readonly TournamentDbContext _dbContext;
         private readonly IMapper _mapper;
-        public AddressService(TournamentDbContext dbContext, IMapper mapper)
+        private readonly ILogger<AddressService> _logger;
+        public AddressService(TournamentDbContext dbContext, IMapper mapper, ILogger<AddressService> logger)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public int CreateAddress(AddressDto addressDto)
@@ -34,6 +36,7 @@ namespace ShootingEventSystemWebAPI.Services
 
         public void DeleteAddress(int id)
         {
+            _logger.LogWarning("Deleting address with id {id}", id);
 
             var adrressToRemove=_dbContext.Addresses.FirstOrDefault(x=>x.Id == id);
             if (adrressToRemove != null)
